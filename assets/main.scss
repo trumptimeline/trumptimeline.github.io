@@ -1,0 +1,176 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+// Import partials from the `minima` theme.
+@import "minima";
+
+.site-header {
+	.wrapper {
+		padding: 1rem 0;
+		position: relative;
+		text-align: center;
+		.site-nav {
+			position: absolute;
+			top: .5rem;
+			right: .5rem;
+			float: none;
+		}
+		.site-title {
+			float: none;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+			.logo {
+				display: block;
+				background-position: center center;
+				background-image: url(logo.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 120px;
+			}
+		}
+	}
+}
+
+.btn {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	line-height: 2.25rem;
+	padding: 0 1.25rem;
+	&:hover {
+		transition: all 0.5s;
+		background: rgba(0,0,0,0.1);
+		text-decoration: none;
+	}
+	&.btn-sm {
+		font-size: 0.75rem;
+		line-height: 1.5rem;
+		padding: 0 0.5rem;
+	}
+	&.btn-xs {
+		font-size: 0.65rem;
+		line-height: 1.25rem;
+		padding: 0 0.5rem;
+	}
+}
+
+.category-list {
+	padding: 0 0 3rem 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	li {
+		display: inline-block;
+		padding: 0 0.5rem;
+		margin: 0;
+		a {
+		}
+	}
+}
+
+.post-list {
+  > li {
+		position: relative;
+		padding-left: 100px;
+		border-bottom: 1px solid #eee;
+		> .post-meta {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 0 .5rem;
+			line-height: 2rem;
+			background: #2a7ae2;
+			border-radius: 4px;
+			color: white;
+		}
+		> h2 {
+			margin: 0;
+			padding: 0;
+			.post-link {
+				line-height: 2rem;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		> .post-content {
+			margin: 0 0 15px 0;
+		}
+		> .post-tags-inline {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				line-height: 1.2rem;
+				a {
+					font-size: 0.75rem;
+					&:after {
+						content: ", ";
+					}
+				}
+				&:last-child a:after {
+					content: "";
+				}
+			}
+		}
+		> .post-tags,
+		> .post-sources {
+			list-style: none;
+			margin: 0 0 0.5rem 0;
+			padding: 0;
+			&:before {
+				content: "Sources: ";
+				display: inline-block;
+				line-height: 1.4rem;
+			}
+			li {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				line-height: 1.4rem;
+				a {
+				}
+			}
+		}
+		> .post-tags:before {
+			content: "Tags: ";
+		}
+	}
+}

@@ -1,0 +1,20 @@
+# Site Settings
+title: Trump Actions Tracker
+email:
+description: >
+  This site provides a chronological list of all executive and legislative
+  actions taken during the Trump administration.
+  This site is intended as a companion to TrumpTracker.github.io, providing a
+  simple chronological timeline of actions.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: trumpactions
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
