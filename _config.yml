@@ -8,7 +8,7 @@ description: >
   simple chronological timeline of actions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: trumpactions
+github_username: trumptimeline
 
 # Build settings
 markdown: kramdown
