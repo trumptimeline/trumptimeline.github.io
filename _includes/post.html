@@ -6,7 +6,11 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    {{ post.content | truncate: 256 }}
+    {% if post.description %}
+      {{ post.description }}
+    {% else %}
+      {{ post.content | truncate: 256 }}
+    {% endif %}
   </div>
 
   {% if post.sources.size > 0 %}

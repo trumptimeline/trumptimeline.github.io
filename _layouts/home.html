@@ -2,11 +2,6 @@
 layout: default
 ---
 <div class="home">
-  <ul class="category-list">
-    {% for category in site.data.categories %}
-      <li><a class="btn" href="">{{category[1].name}}</a></li>
-    {% endfor %}
-  </ul>
   <div class="post-list">
     {% for post in site.posts %}
       {% include post.html %}
