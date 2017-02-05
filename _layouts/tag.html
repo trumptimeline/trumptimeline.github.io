@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="tag-page">
+  <h1>Articles by tag: {{ page.title }}</h1>
+  <div class="post-list">
+    {% if site.tags[page.title] %}
+      {% for post in site.tags[page.title] %}
+        {% include post.html %}
+      {% endfor %}
+    {% else %}
+      <p>There are no posts for this tag.</p>
+    {% endif %}
+  </div>
+</div>

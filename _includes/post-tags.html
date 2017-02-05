@@ -1,0 +1,17 @@
+{% if post.tags.size > 0 %}
+<ul class="post-tags">
+  {% for tag in post.tags %}
+    {% assign tag_found = false %}
+    {% for tag_page in site.pages %}
+      {% if tag_page.title == tag %}
+        <li><a href="{{ tag_page.permalink | absolute_url }}" target="_blank">{{tag_page.title}}</a></li>
+        {% assign tag_found = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if tag_found == false %}
+      <li><del>{{tag}}</del></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

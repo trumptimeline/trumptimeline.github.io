@@ -153,11 +153,11 @@ body {
 					line-height: 1.2rem;
 					a {
 						font-size: 0.75rem;
-						&:after {
-							content: ", ";
-						}
 					}
-					&:last-child a:after {
+					&:after {
+						content: ", ";
+					}
+					&:last-child:after {
 						content: "";
 					}
 				}
@@ -176,11 +176,11 @@ body {
 					line-height: 1.4rem;
 					a {
 						color: #555;
-						&:after {
-							content: ", ";
-						}
 					}
-					&:last-child a:after {
+					&:after {
+						content: ", ";
+					}
+					&:last-child:after {
 						content: "";
 					}
 				}
@@ -209,14 +209,17 @@ body {
 				.post-tags,
 				.post-sources {
 					&:before {
-						content: "Sources: ";
-						display: inline-block;
-						line-height: 1.4rem;
+				    font-family: FontAwesome;
+				    display: inline-block;
+						text-align: center;
+				    width: 16px;
+				    padding: 0 5px 0 0;
+        		content: "\f0f6";
 					}
 				}
 				.post-tags {
 					&:before {
-						content: "Tags: ";
+        		content: "\f02c";
 					}
 				}
 				.post-content {

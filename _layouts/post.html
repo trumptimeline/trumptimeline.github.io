@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign post = page %}
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -8,24 +9,8 @@ layout: default
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
 
-  {% if page.sources.size > 0 %}
-  <ul class="post-sources">
-    {% for source in page.sources %}
-      <li>
-        <a href="{{source.url}}" target="_blank">{{source.name}}</a>
-        {% if source.screenshot %}<a href="{{ "assets/screenshot/" | absolute_url }}{{source.screenshot}}" target="_blank"><i class="fa fa-camera"></i></a>{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-
-  {% if page.tags.size > 0 %}
-  <ul class="post-tags">
-    {% for tag in page.tags %}
-      <li><a href="{{ "tag/" | absolute_url }}{{tag}}" target="_blank">{{tag}}</a></li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+  {% include post-sources.html %}
+  {% include post-tags.html %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
