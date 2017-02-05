@@ -1,7 +1,7 @@
 {% if post.sources.size > 0 %}
 <ul class="post-sources">
   {% for source in post.sources %}
-    <li>{% if source.screenshot %}<a href="{{ "assets/screenshot/" | absolute_url }}{{source.screenshot}}" target="_blank"><i class="fa fa-camera"></i></a> {% endif %}<a href="{{source.url}}" target="_blank">{{source.name}}</a></li>
+    <li>{% if source.screenshot %}<a href="{{ "assets/screenshots/" | absolute_url }}{{source.screenshot}}" target="_blank"><i class="fa fa-camera"></i></a> {% endif %}<a href="{{source.url}}" target="_blank">{{source.name}}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
