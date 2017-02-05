@@ -4,7 +4,7 @@
     {% assign tag_found = false %}
     {% for tag_page in site.pages %}
       {% if tag_page.title == tag %}
-        <li><a href="{{ tag_page.permalink | absolute_url }}" target="_blank">{{tag_page.title}}</a></li>
+        <li><a href="{{ tag_page.permalink | absolute_url }}">{{tag_page.title}}</a></li>
         {% assign tag_found = true %}
         {% break %}
       {% endif %}
