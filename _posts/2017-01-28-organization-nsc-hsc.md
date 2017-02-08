@@ -4,7 +4,7 @@ title: Organization of NSC and HSC
 date: 2017-01-28
 tags:
 - Memorandum
-- Aministration
+- Administration
 sources:
 - name: WhiteHouse.gov
   url: https://www.whitehouse.gov/the-press-office/2017/01/28/presidential-memorandum-organization-national-security-council-and
