@@ -109,6 +109,14 @@
   }
 
 /**
+ * Single Process
+ */
+
+  else {
+    generatePost( $config );
+  }
+
+/**
  * Process Request
  */
 

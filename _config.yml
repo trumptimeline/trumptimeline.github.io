@@ -15,8 +15,10 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
 tag_title_prefix: ''
 tag_title_suffix: ''
+paginate: 25
